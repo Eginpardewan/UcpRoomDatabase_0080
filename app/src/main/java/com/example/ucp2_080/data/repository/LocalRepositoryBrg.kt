@@ -6,28 +6,28 @@ import kotlinx.coroutines.flow.Flow
 
 class LocalRepositoryBrg (
     private val barangDao: BarangDao
-    ) : RepositoryBrg {
-        override suspend fun insertBrg(barang: Barang) {
-            barangDao.insertBarang(barang)
-        }
+) : RepositoryBrg {
+    override suspend fun insertBrg(barang: Barang) {
+        barangDao.insertBarang(barang)
+    }
 
-        //getAllMhs
-        override fun getAllBrg(): Flow<List<Barang>> {
-            return barangDao.getAllBarang()
-        }
+    //getAllBrg
+    override fun getAllBrg(): Flow<List<Barang>> {
+        return barangDao.getAllBarang()
+    }
 
-        //getMhs
-        override fun getBrg(nama: String): Flow<Barang> {
-            return barangDao.getBarang(nama)
-        }
+    //getBrg
+    override fun getBrg(nama: String): Flow<Barang> {
+        return barangDao.getBarang(nama)
+    }
 
-        //deleteMhs
-        override suspend fun deleteBrg(barang: Barang) {
-            barangDao.deleteBarang(barang)
-        }
+    //deleteBrg
+    override suspend fun deleteBrg(barang: Barang) {
+        barangDao.deleteBarang(barang)
+    }
 
-        //updateMhs
-        override suspend fun updateBrg(barang: Barang) {
-            barangDao.updateBarang(barang)
-        }
+    //updateBrg
+    override suspend fun uodateBrg(barang: Barang) {
+        barangDao.updateBarang(barang)
+    }
 }
