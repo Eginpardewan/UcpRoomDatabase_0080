@@ -27,7 +27,7 @@ class LocalRepositoryBrg (
     }
 
     //updateBrg
-    override suspend fun uodateBrg(barang: Barang) {
+    override suspend fun updateBrg(barang: Barang) {
         barangDao.updateBarang(barang)
     }
 }
