@@ -14,5 +14,5 @@ interface RepositoryBrg {
     suspend fun deleteBrg(barang: Barang)
 
     //update
-    suspend fun uodateBrg(barang: Barang)
+    suspend fun updateBrg(barang: Barang)
 }
